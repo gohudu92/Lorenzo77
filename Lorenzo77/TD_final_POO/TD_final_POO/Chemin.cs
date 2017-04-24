@@ -17,7 +17,7 @@ namespace TD_final_POO
 
         public override string ToString()
         {
-            return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
+            return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
         }
     }
 }

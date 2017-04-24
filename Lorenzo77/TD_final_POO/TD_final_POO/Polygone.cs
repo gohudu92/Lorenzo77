@@ -17,7 +17,7 @@ namespace TD_final_POO
 
         public override string ToString()
         {
-            return "<polygon points=\"" + points + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
+            return "<polygon points=\"" + points + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
         }
     }
 }

@@ -23,7 +23,7 @@ namespace TD_final_POO
 
         public override string ToString()
         {
-            return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
+            return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
         }
 
 

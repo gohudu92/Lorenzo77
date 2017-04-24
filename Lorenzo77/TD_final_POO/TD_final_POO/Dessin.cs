@@ -11,7 +11,7 @@ namespace TD_final_POO
     {
 
 
-        static List<Forme> lectureCSV(string nom_fichier)
+        public List<Forme> lectureCSV(string nom_fichier)
         {
             List<Forme> list_form = new List<Forme>();
 
@@ -71,9 +71,13 @@ namespace TD_final_POO
             // Fermeture du StreamReader (attention indispensable) 
             monStreamReader.Close();
 
-
-
             return list_form;
+        }
+
+        public void lire_list(List<Forme> list)
+        {
+            foreach (Forme elem in list)
+                Console.WriteLine(elem); 
         }
     }
 }

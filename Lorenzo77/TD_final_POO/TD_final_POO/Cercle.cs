@@ -21,7 +21,7 @@ namespace TD_final_POO
         
         public override string ToString()
         {
-            return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
+            return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
         }
 
     }
