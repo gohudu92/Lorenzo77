@@ -4,3 +4,6 @@ C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_PO
 C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.pdb
 C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.exe
 C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.pdb
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.exe.config
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.exe
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.pdb
