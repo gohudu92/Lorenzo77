@@ -8,17 +8,22 @@ namespace TD_final_POO
 {
     class Rectangle : Forme
     {
-        private int x;
-        private int y;
-        private int largeur;
-        private int hauteur;
+        private string x;
+        private string y;
+        private string largeur;
+        private string hauteur;
 
-        public Rectangle(string typeDeForme, int idElement, int ordre, int R, int G, int B, int x, int y, int largeur, int hauteur) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Rectangle(string typeDeForme, string idElement, string ordre, string R, string G, string B, string x, string y, string largeur, string hauteur) : base(typeDeForme, idElement, ordre, R, G, B)
         {
             this.x = x;
             this.y = y;
             this.largeur = largeur;
             this.hauteur = hauteur;
+        }
+
+        public override string ToString()
+        {
+            return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
         }
     }
 }

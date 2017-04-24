@@ -8,17 +8,21 @@ namespace TD_final_POO
 {
     class Cercle : Forme
     {
-        private int cx;
-        private int cy;
-        private int r;
+        private string cx;
+        private string cy;
+        private string r;
 
-        public Cercle(string typeDeForme, int idElement, int ordre, int R, int G, int B, int cx, int cy, int r) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Cercle(string typeDeForme, string idElement, string ordre, string R, string G, string B, string cx, string cy, string r) : base(typeDeForme, idElement, ordre, R, G, B)
         {
             this.cx = cx;
             this.cy = cy;
             this.r = r; 
         }
-
         
+        public override string ToString()
+        {
+            return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
+        }
+
     }
 }

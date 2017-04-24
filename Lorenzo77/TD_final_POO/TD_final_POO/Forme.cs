@@ -9,13 +9,13 @@ namespace TD_final_POO
     class Forme
     {
         private string typeDeForme;
-        private int idElement;
-        private int ordre;
-        private int R;
-        private int G;
-        private int B;
+        private string idElement;
+        private string ordre;
+        private string R;
+        private string G;
+        private string B;
 
-        public Forme(string typeDeForme, int idElement, int ordre, int R, int G, int B)
+        public Forme(string typeDeForme, string idElement, string ordre, string R, string G, string B)
         {
             this.typeDeForme = typeDeForme;
             this.idElement = idElement;
@@ -24,5 +24,10 @@ namespace TD_final_POO
             this.G = G;
             this.B = B;
         }
+
+        public string Red { get { return R; } }
+        public string Green { get { return G; } }
+        public string Blue { get { return B; } }
+        
     }
 }

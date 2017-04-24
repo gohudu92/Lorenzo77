@@ -8,15 +8,20 @@ namespace TD_final_POO
 {
     class Texte : Forme
     {
-        private int x;
-        private int y;
+        private string x;
+        private string y;
         private string content;
 
-        public Texte(string typeDeForme, int idElement, int ordre, int R, int G, int B, int x, int y, string content) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Texte(string typeDeForme, string idElement, string ordre, string R, string G, string B, string x, string y, string content) : base(typeDeForme, idElement, ordre, R, G, B)
         {
             this.x = x;
             this.y = y;
             this.content = content; 
+        }
+
+        public override string ToString()
+        {
+            return "<text x=\"" + x + "\" y=\"" + y + "\" fill=\"rgb(" + Red + "," + Green + "," + Blue + ")\">" + content + "</text>";
         }
     }
 }

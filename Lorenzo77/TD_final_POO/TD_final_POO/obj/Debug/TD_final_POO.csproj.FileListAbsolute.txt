@@ -1,0 +1,6 @@
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.csprojResolveAssemblyReference.cache
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.exe.config
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.exe
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.pdb
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.exe
+C:\Users\guill\OneDrive\Documents\Visual Studio 2015\Projects\S6_POO\TD_final_POO\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.pdb

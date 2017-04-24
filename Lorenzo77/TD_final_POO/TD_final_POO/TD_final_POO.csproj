@@ -42,8 +42,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cercle.cs" />
+    <Compile Include="Chemin.cs" />
+    <Compile Include="Dessin.cs" />
+    <Compile Include="Forme.cs" />
+    <Compile Include="Polygone.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Ellipse.cs" />
+    <Compile Include="Rectangle.cs" />
+    <Compile Include="Texte.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

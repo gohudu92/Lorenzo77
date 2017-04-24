@@ -10,9 +10,14 @@ namespace TD_final_POO
     {
         private string points;
 
-        public Polygone(string typeDeForme, int idElement, int ordre, int R, int G, int B, string points) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Polygone(string typeDeForme, string idElement, string ordre, string R, string G, string B, string points) : base(typeDeForme, idElement, ordre, R, G, B)
         {
             this.points = points; 
+        }
+
+        public override string ToString()
+        {
+            return "<polygon points=\"" + points + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" />";
         }
     }
 }
