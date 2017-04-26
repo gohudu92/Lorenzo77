@@ -9,16 +9,23 @@ namespace TD_final_POO
 {
     class Dessin
     {
-        public void CSVtoSVG()
+        private string nom_fichier;
+
+        public Dessin(string nom_fichier)
         {
-            List<Forme> list_form = lectureCSV("ExempleTout.csv");
-            LectureTransformation("ExempleTout.csv", list_form);
-            string chaineSVG = listToString(list_form);
-            Console.WriteLine(chaineSVG);
-            EcrireSVG("ExempleTout.svg", chaineSVG);
+            this.nom_fichier = nom_fichier; 
         }
 
-        public List<Forme> lectureCSV(string nom_fichier)
+        public void CSVtoSVG()
+        {
+            List<Forme> list_form = lectureCSV();
+            LectureTransformation(list_form);
+            string chaineSVG = listToString(list_form);
+            Console.WriteLine(chaineSVG);
+            EcrireSVG(chaineSVG);
+        }
+
+        public List<Forme> lectureCSV()
         {
             List<Forme> list_form = new List<Forme>();
 
@@ -79,7 +86,7 @@ namespace TD_final_POO
             return list_form;
         }
 
-        public void LectureTransformation(string nom_fichier, List<Forme> list_form)
+        public void LectureTransformation(List<Forme> list_form)
         {
             // Ouverture du fichier, 
             StreamReader monStreamReader = new StreamReader(nom_fichier);
@@ -125,9 +132,11 @@ namespace TD_final_POO
             monStreamReader.Close();
         }
 
-        public void EcrireSVG(string nom_fichier, string chaineSVG)
+        public void EcrireSVG(string chaineSVG)
         {
-            using (StreamWriter monStreamWriter = new StreamWriter(nom_fichier))
+            string nom_fichier_svg = nom_fichier.Split('.')[0];
+            nom_fichier_svg += ".svg"; 
+            using (StreamWriter monStreamWriter = new StreamWriter(nom_fichier_svg))
             {
                 monStreamWriter.WriteLine("<svg xmlns=\"http://www.w3.org/2000/svg\" version=\"1.1\">");
                 monStreamWriter.WriteLine(chaineSVG);
