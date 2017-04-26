@@ -12,7 +12,7 @@ namespace TD_final_POO
         private string cy;
         private string r;
 
-        public Cercle(string typeDeForme, string idElement, string ordre, string R, string G, string B, string cx, string cy, string r) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Cercle(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string cx, string cy, string r) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.cx = cx;
             this.cy = cy;
@@ -21,7 +21,15 @@ namespace TD_final_POO
         
         public override string ToString()
         {
-            return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if(Trans == null && Rot == null)
+                return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if(Trans == null && Rot != null)
+                return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
+            if(Trans != null && Rot == null)
+                return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ")\"/>";
+            
+            //si trans && rot non null
+            return "<circle cx=\"" + cx + "\" cy=\"" + cy + "\" r=\"" + r + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ") rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
         }
 
     }

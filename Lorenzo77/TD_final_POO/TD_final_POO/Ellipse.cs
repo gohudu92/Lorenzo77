@@ -13,7 +13,7 @@ namespace TD_final_POO
         private string rx;
         private string ry;
 
-        public Ellipse(string typeDeForme, string idElement, string ordre, string R, string G, string B, string cx, string cy, string rx, string ry) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Ellipse(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string cx, string cy, string rx, string ry) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.cx = cx;
             this.cy = cy;
@@ -23,7 +23,15 @@ namespace TD_final_POO
 
         public override string ToString()
         {
-            return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot == null)
+                return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot != null)
+                return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
+            if (Trans != null && Rot == null)
+                return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ")\"/>";
+
+            //si trans && rot non null
+            return "<ellipse cx=\"" + cx + "\" cy=\"" + cy + "\" rx=\"" + rx + "\" ry=\"" + ry + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ") rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
         }
 
 

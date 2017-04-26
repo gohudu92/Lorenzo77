@@ -13,7 +13,7 @@ namespace TD_final_POO
         private string largeur;
         private string hauteur;
 
-        public Rectangle(string typeDeForme, string idElement, string ordre, string R, string G, string B, string x, string y, string largeur, string hauteur) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Rectangle(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string x, string y, string largeur, string hauteur) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.x = x;
             this.y = y;
@@ -23,7 +23,15 @@ namespace TD_final_POO
 
         public override string ToString()
         {
-            return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot == null)
+                return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot != null)
+                return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
+            if (Trans != null && Rot == null)
+                return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ")\"/>";
+
+            //si trans && rot non null
+            return "<rect x=\"" + x + "\" y=\"" + y + "\" width=\"" + largeur + "\" height=\"" + hauteur + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ") rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
         }
     }
 }

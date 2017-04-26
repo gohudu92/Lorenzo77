@@ -11,8 +11,8 @@ namespace TD_final_POO
         static void Main(string[] args)
         {
             Dessin dessin = new Dessin();
-            List<Forme> list_form = dessin.lectureCSV("ExempleTout.csv");
-            dessin.lire_list(list_form); 
+            dessin.CSVtoSVG();
+
             Console.ReadKey(); 
         }
     }

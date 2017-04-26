@@ -10,14 +10,23 @@ namespace TD_final_POO
     {
         private string path;
 
-        public Chemin(string typeDeForme, string idElement, string ordre, string R, string G, string B, string path) : base(typeDeForme, idElement, ordre, R, G, B)
+        public Chemin(string typeDeForme, string idElement, string ordre, Translation translation, Rotation rotation, string R, string G, string B, string path) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.path = path;
         }
 
         public override string ToString()
         {
-            return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot == null)
+                return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\"/>";
+            if (Trans == null && Rot != null)
+                return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
+            if (Trans != null && Rot == null)
+                return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ")\"/>";
+
+            //si trans && rot non null
+            return "<path d=\"" + path + "\" style=\"fill:rgb(" + Red + "," + Green + "," + Blue + ")\" transform=\"translate(" + Trans.Dx + "," + Trans.Dy + ") rotate(" + Rot.Angle + " " + Rot.Cx + "," + Rot.Cy + ")\"/>";
+
         }
     }
 }
