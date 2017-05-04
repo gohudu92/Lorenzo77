@@ -10,9 +10,8 @@ namespace TD_final_POO
     {
         static void Main(string[] args)
         {
-            Dessin dessin = new Dessin("ExempleTout.csv");
-            dessin.CSVtoSVG();
-
+            Dessin dessin = new Dessin("MM.csv"); //on crée un objet dessin qui prend en paramètre le fichier .csv
+            dessin.CSVtoSVG(); //on convertit le CSV en SVG, le fichier .svg est créé automatiquement
 
             Console.ReadKey(); 
         }
