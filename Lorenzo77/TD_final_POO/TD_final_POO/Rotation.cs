@@ -8,12 +8,12 @@ namespace TD_final_POO
 {
     class Rotation
     {
-        private string idElement;
-        private string angle; 
-        private string cx;
-        private string cy;
+        private int idElement;
+        private int angle; 
+        private int cx;
+        private int cy;
 
-        public Rotation(string idElement, string angle, string cx, string cy)
+        public Rotation(int idElement, int angle, int cx, int cy)
         {
             this.idElement = idElement;
             this.angle = angle;
@@ -21,17 +21,17 @@ namespace TD_final_POO
             this.cy = cy; 
         }
 
-        public string Angle
+        public int Angle
         {
             get { return angle; }
             set { angle = value; }
         }
-        public string Cx
+        public int Cx
         {
             get { return cx; }
             set { cx = value; }
         }
-        public string Cy
+        public int Cy
         {
             get { return cy; }
             set { cy = value; }

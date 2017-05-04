@@ -8,11 +8,11 @@ namespace TD_final_POO
 {
     class Cercle : Forme
     {
-        private string cx;
-        private string cy;
-        private string r;
+        private int cx;
+        private int cy;
+        private int r;
 
-        public Cercle(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string cx, string cy, string r) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
+        public Cercle(string typeDeForme, int idElement, int ordre, int R, int G, int B, Translation translation, Rotation rotation, int cx, int cy, int r) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.cx = cx;
             this.cy = cy;

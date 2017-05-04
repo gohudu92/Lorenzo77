@@ -8,12 +8,12 @@ namespace TD_final_POO
 {
     class Ellipse : Forme
     {
-        private string cx;
-        private string cy;
-        private string rx;
-        private string ry;
+        private int cx;
+        private int cy;
+        private int rx;
+        private int ry;
 
-        public Ellipse(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string cx, string cy, string rx, string ry) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
+        public Ellipse(string typeDeForme, int idElement, int ordre, int R, int G, int B, Translation translation, Rotation rotation, int cx, int cy, int rx, int ry) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.cx = cx;
             this.cy = cy;

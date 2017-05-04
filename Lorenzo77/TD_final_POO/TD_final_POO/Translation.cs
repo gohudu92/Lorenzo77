@@ -8,23 +8,23 @@ namespace TD_final_POO
 {
     class Translation
     {
-        private string idElement;
-        private string dx;
-        private string dy;
+        private int idElement;
+        private int dx;
+        private int dy;
 
-        public Translation(string idElement, string dx, string dy)
+        public Translation(int idElement, int dx, int dy)
         {
             this.idElement = idElement;
             this.dx = dx;
             this.dy = dy;
         }
 
-        public string Dx
+        public int Dx
         {
             get { return dx; }
             set { dx = value; }
         }
-        public string Dy
+        public int Dy
         {
             get { return dy; }
             set { dy = value; }

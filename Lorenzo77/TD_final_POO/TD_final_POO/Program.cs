@@ -10,8 +10,9 @@ namespace TD_final_POO
     {
         static void Main(string[] args)
         {
-            Dessin dessin = new Dessin("MM.csv");
+            Dessin dessin = new Dessin("ExempleTout.csv");
             dessin.CSVtoSVG();
+
 
             Console.ReadKey(); 
         }

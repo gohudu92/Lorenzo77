@@ -43,38 +43,133 @@ namespace TD_final_POO
 
                 if (temp[0] == "Cercle")
                 {
-                    Cercle cercle = new Cercle(temp[0], temp[1], temp[8], temp[5], temp[6], temp[7], null, null, temp[2], temp[3], temp[4]);
-                    list_form.Add(cercle); 
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[8], out int ordre);
+                        Int32.TryParse(temp[5], out int R);
+                        Int32.TryParse(temp[6], out int G);
+                        Int32.TryParse(temp[7], out int B);
+                        Int32.TryParse(temp[2], out int cx);
+                        Int32.TryParse(temp[3], out int cy);
+                        Int32.TryParse(temp[4], out int r);
+                        Cercle cercle = new Cercle(typeDeForme, idElement, ordre, R, G, B, null, null, cx, cy, r);
+                        list_form.Add(cercle);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
                 }
 
                 if (temp[0] == "Ellipse")
                 {
-                    Ellipse ellipse = new Ellipse(temp[0], temp[1], temp[9], temp[6], temp[7], temp[8], null, null, temp[2], temp[3], temp[4], temp[5]);
-                    list_form.Add(ellipse);
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[9], out int ordre);
+                        Int32.TryParse(temp[6], out int R);
+                        Int32.TryParse(temp[7], out int G);
+                        Int32.TryParse(temp[8], out int B);
+                        Int32.TryParse(temp[2], out int cx);
+                        Int32.TryParse(temp[3], out int cy);
+                        Int32.TryParse(temp[4], out int rx);
+                        Int32.TryParse(temp[5], out int ry);
+                        Ellipse ellipse = new Ellipse(typeDeForme, idElement, ordre, R, G, B, null, null, cx, cy, rx, ry);
+                        list_form.Add(ellipse);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
+
                 }
 
                 if (temp[0] == "Rectangle")
                 {
-                    Rectangle rect = new Rectangle(temp[0], temp[1], temp[9], temp[6], temp[7], temp[8], null, null, temp[2], temp[3], temp[4], temp[5]);
-                    list_form.Add(rect);
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[9], out int ordre);
+                        Int32.TryParse(temp[6], out int R);
+                        Int32.TryParse(temp[7], out int G);
+                        Int32.TryParse(temp[8], out int B);
+                        Int32.TryParse(temp[2], out int x);
+                        Int32.TryParse(temp[3], out int y);
+                        Int32.TryParse(temp[4], out int largeur);
+                        Int32.TryParse(temp[5], out int hauteur);
+                        Rectangle rect = new Rectangle(typeDeForme, idElement, ordre, R, G, B, null, null, x, y, largeur, hauteur);
+                        list_form.Add(rect);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
                 }
 
                 if (temp[0] == "Polygone")
                 {
-                    Polygone poly = new Polygone(temp[0], temp[1], temp[6], null, null, temp[3], temp[4], temp[5], temp[2]);
-                    list_form.Add(poly); 
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[6], out int ordre);
+                        Int32.TryParse(temp[3], out int R);
+                        Int32.TryParse(temp[4], out int G);
+                        Int32.TryParse(temp[5], out int B);
+                        string points = temp[2];
+                        Polygone poly = new Polygone(typeDeForme, idElement, ordre, null, null, R, G, B, points);
+                        list_form.Add(poly);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
                 }
 
                 if(temp[0] == "Chemin")
                 {
-                    Chemin chemin = new Chemin(temp[0], temp[1], temp[6], null, null, temp[3], temp[4], temp[5], temp[2]);
-                    list_form.Add(chemin);
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[6], out int ordre);
+                        Int32.TryParse(temp[3], out int R);
+                        Int32.TryParse(temp[4], out int G);
+                        Int32.TryParse(temp[5], out int B);
+                        string path = temp[2];
+                        Chemin chemin = new Chemin(typeDeForme, idElement, ordre, null, null, R, G, B, path);
+                        list_form.Add(chemin);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
                 }
 
                 if (temp[0] == "Texte")
                 {
-                    Texte text = new Texte(temp[0], temp[1], temp[8], null, null, temp[5], temp[6], temp[7], temp[2], temp[3], temp[4]);
-                    list_form.Add(text);
+                    try
+                    {
+                        string typeDeForme = temp[0];
+                        Int32.TryParse(temp[1], out int idElement);
+                        Int32.TryParse(temp[8], out int ordre);
+                        Int32.TryParse(temp[5], out int R);
+                        Int32.TryParse(temp[6], out int G);
+                        Int32.TryParse(temp[7], out int B);
+                        Int32.TryParse(temp[2], out int x);
+                        Int32.TryParse(temp[3], out int y);
+                        string contenu = temp[4];
+                        Texte text = new Texte(typeDeForme, idElement, ordre, null, null, R, G, B, x, y, contenu);
+                        list_form.Add(text);
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine("{0} Exception caught.", e);
+                    }
                 }
             
                 // lire ligne suivante.
@@ -104,10 +199,21 @@ namespace TD_final_POO
                 {
                     foreach(Forme elem in list_form)
                     {
-                        if (temp[1] == elem.IDElement)
+                        try
                         {
-                            Translation trans = new Translation(temp[1], temp[2], temp[3]);
-                            elem.Trans = trans; 
+                            Int32.TryParse(temp[1], out int idElement);
+                            if (idElement == elem.IDElement)
+                            {
+                                Int32.TryParse(temp[2], out int dx);
+                                Int32.TryParse(temp[3], out int dy);
+
+                                Translation trans = new Translation(idElement, dx, dy);
+                                elem.Trans = trans;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("{0} Exception caught.", e);
                         }
                     }
                 }
@@ -116,10 +222,21 @@ namespace TD_final_POO
                 {
                     foreach (Forme elem in list_form)
                     {
-                        if (temp[1] == elem.IDElement)
+                        try
                         {
-                            Rotation rot = new Rotation(temp[1], temp[2], temp[3], temp[4]);
-                            elem.Rot = rot;
+                            Int32.TryParse(temp[1], out int idElement);
+                            if (idElement == elem.IDElement)
+                            {
+                                Int32.TryParse(temp[2], out int angle);
+                                Int32.TryParse(temp[3], out int cx);
+                                Int32.TryParse(temp[4], out int cy);
+                                Rotation rot = new Rotation(idElement, angle, cx, cy);
+                                elem.Rot = rot;
+                            }
+                        }
+                        catch (Exception e)
+                        {
+                            Console.WriteLine("{0} Exception caught.", e);
                         }
                     }
                 }

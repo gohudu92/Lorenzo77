@@ -10,7 +10,7 @@ namespace TD_final_POO
     {
         private string path;
 
-        public Chemin(string typeDeForme, string idElement, string ordre, Translation translation, Rotation rotation, string R, string G, string B, string path) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
+        public Chemin(string typeDeForme, int idElement, int ordre, Translation translation, Rotation rotation, int R, int G, int B, string path) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.path = path;
         }

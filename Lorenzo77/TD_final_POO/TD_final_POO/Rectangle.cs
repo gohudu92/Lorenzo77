@@ -8,12 +8,12 @@ namespace TD_final_POO
 {
     class Rectangle : Forme
     {
-        private string x;
-        private string y;
-        private string largeur;
-        private string hauteur;
+        private int x;
+        private int y;
+        private int largeur;
+        private int hauteur;
 
-        public Rectangle(string typeDeForme, string idElement, string ordre, string R, string G, string B, Translation translation, Rotation rotation, string x, string y, string largeur, string hauteur) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
+        public Rectangle(string typeDeForme, int idElement, int ordre, int R, int G, int B, Translation translation, Rotation rotation, int x, int y, int largeur, int hauteur) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.x = x;
             this.y = y;

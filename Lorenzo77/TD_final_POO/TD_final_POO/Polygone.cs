@@ -10,7 +10,7 @@ namespace TD_final_POO
     {
         private string points;
 
-        public Polygone(string typeDeForme, string idElement, string ordre, Translation translation, Rotation rotation, string R, string G, string B, string points) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
+        public Polygone(string typeDeForme, int idElement, int ordre, Translation translation, Rotation rotation, int R, int G, int B, string points) : base(typeDeForme, idElement, ordre, R, G, B, translation, rotation)
         {
             this.points = points; 
         }
