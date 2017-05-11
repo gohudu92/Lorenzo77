@@ -1,0 +1,3 @@
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\bin\Debug\TD_final_POO.exe.config
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.exe
+C:\Users\Hugo\Documents\Cours_Semestre_6\POO\TDFinal\Git\Lorenzo77\TD_final_POO\TD_final_POO\obj\Debug\TD_final_POO.pdb
